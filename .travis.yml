@@ -31,6 +31,7 @@ matrix:
         - RUST_BACKTRACE=1
         - CFLAGS_x86_64_fortanix_unknown_sgx="-isystem/usr/include/x86_64-linux-gnu -mlvi-hardening -mllvm -x86-experimental-lvi-inline-asm-hardening"
         - CC_x86_64_fortanix_unknown_sgx=clang-11
+        - CC=clang-11
       before_script:
         - rustup target add x86_64-fortanix-unknown-sgx x86_64-unknown-linux-musl
         - rustup toolchain add nightly
